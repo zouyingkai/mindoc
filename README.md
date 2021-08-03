@@ -46,13 +46,13 @@ MinDoc 的前身是 [SmartWiki](https://github.com/lifei6671/SmartWiki) 文档�
 ```bash
 # 克隆源码
 git clone https://github.com/mindoc-org/mindoc.git
-# go包安装
+# go包安装,这里超时的话在项目根目录执行一下go env -w GOPROXY=https://goproxy.cn
 go mod tidy
 # 编译(sqlite需要CGO支持)
 go build -ldflags "-w"
 # 数据库初始化(此步骤执行之前，需配置`conf/app.conf`)
 ./mindoc install
-# 执行
+# 执行，后台执行运行 [root@iZwz99flc8kkszbb0jvibmZ mindoc]# nohup ./mindoc &amp;
 ./mindoc
 ```
 
